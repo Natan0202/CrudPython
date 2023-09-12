@@ -2,18 +2,29 @@ class Cadastrar:
     def __init__(self):
         #self.id = id
         self.nome = []
+        self.senha = []
+        self.id = []
 
-    def setNome(self, nome):
+    def setDados(self, nome, senha, id):
         self.nome.append(nome)
+        self.senha.append(senha)
+        self.id.append(id)
 
-    def __str__(self):
-       return '\n'.join(self.nome)
+    def mostrar(self):
+       #return '\n'.join(self.nome) + '\n'.join(self.senha) + '\n'.join(self.id)
+        #return '\n'.join(self.nome), '\n'.join(self.senha)
+        
+        print(f'{self.id} {self.nome} {self.senha} \n')
     
     def deletar(self, nome):
         del self.nome[nome]
+        #fazer uma lógica para apagar toda a linha que está o ID
 
-    def update(self, nome, id):
+
+    def update(self, nome, id, senha):
         self.nome[id] = nome
+        self.senha[id] = senha
+
         
 
 
